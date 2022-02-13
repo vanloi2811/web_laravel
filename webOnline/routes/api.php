@@ -28,6 +28,7 @@ use App\Models\StockAdjust;
 use App\Http\Controllers\StockAdjustController;
 use App\Models\StockAdjustDetail;
 use App\Http\Controllers\StockAdjustDetailController;
+use App\Http\Controllers\FileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -130,3 +131,5 @@ Route::get('/stockadjustdetail/{id}', [StockAdjustDetailController::class, 'show
 Route::post('/stockadjustdetail', [StockAdjustDetailController::class, 'store']);
 Route::put('/stockadjustdetail/update/{stockadjustdetail}', [StockAdjustDetailController::class, 'update']);
 Route::delete('/stockadjustdetail/delete/{stockadjustdetail}', [StockAdjustDetailController::class, 'destroy']);
+
+Route::post('/upload', [FileController::class, 'upload']);
