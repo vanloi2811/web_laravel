@@ -24,7 +24,7 @@ class OrdelDetailController extends Controller
             'priceSale' => 'required',
             'amount' => 'required',
             'note' => 'required',
-            'cutomerID' => 'required',
+            'customerID' => 'required',
             'productID' => 'required',
             'orderID' => 'required',
         ]);
@@ -34,7 +34,7 @@ class OrdelDetailController extends Controller
             'priceSale' => request('priceSale'),
             'amount' => request('amount'),
             'note' => request('note'),
-            'cutomerID' => request('cutomerID'),
+            'customerID' => request('cutomerID'),
             'productID' => request('productID'),
             'orderID' => request('orderID'),
         ]);
@@ -47,7 +47,7 @@ class OrdelDetailController extends Controller
             'priceSale' => 'required',
             'amount' => 'required',
             'note' => 'required',
-            'cutomerID' => 'required',
+            'customerID' => 'required',
             'productID' => 'required',
             'orderID' => 'required',
         ]);
@@ -57,7 +57,7 @@ class OrdelDetailController extends Controller
             'priceSale' => request('priceSale'),
             'amount' => request('amount'),
             'note' => request('note'),
-            'cutomerID' => request('cutomerID'),
+            'customerID' => request('cutomerID'),
             'productID' => request('productID'),
             'orderID' => request('orderID'),
         ]);
