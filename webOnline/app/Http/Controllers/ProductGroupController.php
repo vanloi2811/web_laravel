@@ -24,6 +24,11 @@ class ProductGroupController extends Controller
             'name' => 'required',
             'isActive' => 'required',
             'note' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'name.required'=>'Bạn phải nhập tên',
+            'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
+            'note.required'=>'Bạn phải nhập ghi chú',
         ]);
 
         return ProductGroup::create([
@@ -41,6 +46,11 @@ class ProductGroupController extends Controller
             'name' => 'required',
             'isActive' => 'required',
             'note' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'name.required'=>'Bạn phải nhập tên',
+            'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
+            'note.required'=>'Bạn phải nhập ghi chú',
         ]);
 
         $success = $productgroup->update([

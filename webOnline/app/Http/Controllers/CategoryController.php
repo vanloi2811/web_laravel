@@ -22,6 +22,9 @@ class CategoryController extends Controller
         request()->validate([
             'name' => 'required',
             'description' => 'required',
+        ],[
+            'name.required'=>'Bạn phải nhập tên',
+            'description.required'=>'Bạn phải nhập mô tả',
         ]);
 
         return Category::create([
@@ -35,6 +38,9 @@ class CategoryController extends Controller
         request()->validate([
             'name' => 'required',
             'description' => 'required',
+        ],[
+            'name.required'=>'Bạn phải nhập tên',
+            'description.required'=>'Bạn phải nhập mô tả',
         ]);
 
         $success = $category->update([

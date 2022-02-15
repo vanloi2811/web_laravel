@@ -30,6 +30,17 @@ class EmployeeController extends Controller
             'isActive' => 'required',
             'note' => 'required',
             'employeeGroupID' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'name.required'=>'Bạn phải nhập tên',
+            'phone.required'=>'Bạn phải nhập số điện thoại',
+            'email.required'=>'Bạn phải nhập email',
+            'address.required'=>'Bạn phải nhập địa chỉ',
+            'dob.required'=>'Bạn phải nhập ngày sinh',
+            'salary.required'=>'Bạn phải nhập lương',
+            'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
+            'note.required'=>'Bạn phải nhập ghi chú',
+            'employeeGroupID.required'=>'Bạn phải nhập mã nhóm nhân viên',
         ]);
 
         return Employee::create([
@@ -59,6 +70,17 @@ class EmployeeController extends Controller
             'isActive' => 'required',
             'note' => 'required',
             'employeeGroupID' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'name.required'=>'Bạn phải nhập tên',
+            'phone.required'=>'Bạn phải nhập số điện thoại',
+            'email.required'=>'Bạn phải nhập email',
+            'address.required'=>'Bạn phải nhập địa chỉ',
+            'dob.required'=>'Bạn phải nhập ngày sinh',
+            'salary.required'=>'Bạn phải nhập lương',
+            'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
+            'note.required'=>'Bạn phải nhập ghi chú',
+            'employeeGroupID.required'=>'Bạn phải nhập mã nhóm nhân viên',
         ]);
 
         $success = $employee->update([

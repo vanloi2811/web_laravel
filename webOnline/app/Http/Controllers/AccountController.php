@@ -40,6 +40,11 @@ class AccountController extends Controller
             'password' => 'required',
             'note' => 'required',
             'isActive' => 'required',
+        ],[
+            'username.required'=>'Bạn phải nhập tên đăng nhập',
+            'password.required'=>'Bạn phải nhập mật khẩu',
+            'note.required'=>'Bạn phải nhập ghi chú',
+            'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
         ]);
 
         return Account::create([
@@ -57,6 +62,11 @@ class AccountController extends Controller
             'password' => 'required',
             'note' => 'required',
             'isActive' => 'required',
+        ],[
+            'username.required'=>'Bạn phải nhập tên đăng nhập',
+            'password.required'=>'Bạn phải nhập mật khẩu',
+            'note.required'=>'Bạn phải nhập ghi chú',
+            'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
         ]);
 
         $success = $account->update([

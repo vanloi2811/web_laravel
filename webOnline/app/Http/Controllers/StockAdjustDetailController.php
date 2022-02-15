@@ -24,6 +24,11 @@ class StockAdjustDetailController extends Controller
             'note' => 'required',
             'productID' => 'required',
             'stockAdjustID' => 'required',
+        ],[
+            'quantity.required'=>'Bạn phải nhập số lượng',
+            'note.required'=>'Bạn phải nhập ghi chú',
+            'productID.required'=>'Bạn phải nhập mã sản phẩm',
+            'stockAjustID.required'=>'Bạn phải nhập mã điều chỉnh',
         ]);
 
         return StockAdjustDetail::create([
@@ -44,6 +49,11 @@ class StockAdjustDetailController extends Controller
             'isExport' => 'required',
             'accountID' => 'required',
             'roleID' => 'required',
+        ],[
+            'quantity.required'=>'Bạn phải nhập số lượng',
+            'note.required'=>'Bạn phải nhập ghi chú',
+            'productID.required'=>'Bạn phải nhập mã sản phẩm',
+            'stockAjustID.required'=>'Bạn phải nhập mã điều chỉnh',
         ]);
 
         $success = $stockadjustdetail->update([

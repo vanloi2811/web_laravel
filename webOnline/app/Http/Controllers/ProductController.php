@@ -32,6 +32,19 @@ class ProductController extends Controller
             'isActive' => 'required',
             'note' => 'required',
             'productGroupID' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'name.required'=>'Bạn phải nhập tên',
+            'barCode.required'=>'Bạn phải nhập mã vạch',
+            'priceSale.required'=>'Bạn phải nhập giá giảm',
+            'priceBuy.required'=>'Bạn phải nhập giá mua',
+            'inventory.required'=>'Bạn phải nhập hàng tổn kho',
+            'minStock.required'=>'Bạn phải nhập tồn kho tối thiểu',
+            'maxStock.required'=>'Bạn phải nhập tồn kho tối đa',
+            'sort.required'=>'Bạn phải nhập loại',
+            'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
+            'note.required'=>'Bạn phải nhập ghi chú',
+            'productGroupID.required'=>'Bạn phải nhập mã nhóm sản phẩm',
         ]);
 
         return Product::create([
@@ -65,6 +78,19 @@ class ProductController extends Controller
             'isActive' => 'required',
             'note' => 'required',
             'productGroupID' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'name.required'=>'Bạn phải nhập tên',
+            'barCode.required'=>'Bạn phải nhập mã vạch',
+            'priceSale.required'=>'Bạn phải nhập giá giảm',
+            'priceBuy.required'=>'Bạn phải nhập giá mua',
+            'inventory.required'=>'Bạn phải nhập hàng tổn kho',
+            'minStock.required'=>'Bạn phải nhập tồn kho tối thiểu',
+            'maxStock.required'=>'Bạn phải nhập tồn kho tối đa',
+            'sort.required'=>'Bạn phải nhập loại',
+            'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
+            'note.required'=>'Bạn phải nhập ghi chú',
+            'productGroupID.required'=>'Bạn phải nhập mã nhóm sản phẩm',
         ]);
 
         $success = $product->update([

@@ -27,6 +27,14 @@ class AddressController extends Controller
             'isDefault' => 'required',
             'note' => 'required',
             'customerID' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'name.required'=>'Bạn phải nhập tên',
+            'phone.required'=>'Bạn phải nhập số điện thoại',
+            'address.required'=>'Bạn phải nhập địa chỉ',
+            'isDefault.required'=>'Bạn phải nhập đúng hoặc sai',
+            'note.required'=>'Bạn phải nhập ghi chú',
+            'CustomerID.required'=>'Bạn phải nhập mã khách hàng',
         ]);
 
         return Address::create([
@@ -50,6 +58,14 @@ class AddressController extends Controller
             'isDefault' => 'required',
             'note' => 'required',
             'customerID' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'name.required'=>'Bạn phải nhập tên',
+            'phone.required'=>'Bạn phải nhập số điện thoại',
+            'address.required'=>'Bạn phải nhập địa chỉ',
+            'isDefault.required'=>'Bạn phải đúng hoặc sai',
+            'note.required'=>'Bạn phải nhập ghi chú',
+            'CustomerID.required'=>'Bạn phải nhập mã khách hàng',
         ]);
 
         $success = $address->update([

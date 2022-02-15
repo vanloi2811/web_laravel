@@ -24,9 +24,17 @@ class OrdelDetailController extends Controller
             'priceSale' => 'required',
             'amount' => 'required',
             'note' => 'required',
-            'cutomerID' => 'required',
+            'customerID' => 'required',
             'productID' => 'required',
             'orderID' => 'required',
+        ],[
+            'quantity.required'=>'Bạn phải nhập số lượng',
+            'priceSale.required'=>'Bạn phải nhập giảm giá',
+            'amount.required'=>'Bạn phải nhập số lượng',
+            'note.required'=>'Bạn phải nhập ghi chú',
+            'customerID.required'=>'Bạn phải nhập mã khách hàng',
+            'productID.required'=>'Bạn phải nhập mã sản phẩm',
+            'orderID.required'=>'Bạn phải nhập mã đặt hàng',
         ]);
 
         return OrdelDetail::create([
@@ -34,7 +42,7 @@ class OrdelDetailController extends Controller
             'priceSale' => request('priceSale'),
             'amount' => request('amount'),
             'note' => request('note'),
-            'cutomerID' => request('cutomerID'),
+            'customerID' => request('cutomerID'),
             'productID' => request('productID'),
             'orderID' => request('orderID'),
         ]);
@@ -47,9 +55,17 @@ class OrdelDetailController extends Controller
             'priceSale' => 'required',
             'amount' => 'required',
             'note' => 'required',
-            'cutomerID' => 'required',
+            'customerID' => 'required',
             'productID' => 'required',
             'orderID' => 'required',
+        ],[
+            'quantity.required'=>'Bạn phải nhập số lượng',
+            'priceSale.required'=>'Bạn phải nhập giảm giá',
+            'amount.required'=>'Bạn phải nhập số lượng',
+            'note.required'=>'Bạn phải nhập ghi chú',
+            'customerID.required'=>'Bạn phải nhập mã khách hàng',
+            'productID.required'=>'Bạn phải nhập mã sản phẩm',
+            'orderID.required'=>'Bạn phải nhập mã đặt hàng',
         ]);
 
         $success = $orderdetail->update([
@@ -57,7 +73,7 @@ class OrdelDetailController extends Controller
             'priceSale' => request('priceSale'),
             'amount' => request('amount'),
             'note' => request('note'),
-            'cutomerID' => request('cutomerID'),
+            'customerID' => request('cutomerID'),
             'productID' => request('productID'),
             'orderID' => request('orderID'),
         ]);

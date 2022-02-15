@@ -27,6 +27,14 @@ class PermissionController extends Controller
             'isExport' => 'required',
             'accountID' => 'required',
             'roleID' => 'required',
+        ],[
+            'isView.required'=>'Bạn phải đúng hoặc sai',
+            'isCreate.required'=>'Bạn phải đúng hoặc sai',
+            'isUpdate.required'=>'Bạn phải đúng hoặc sai',
+            'isDelete.required'=>'Bạn phải đúng hoặc sai',
+            'isExport.required'=>'Bạn phải đúng hoặc sai',
+            'accountID.required'=>'Bạn phải nhập mã tài khoản',
+            'roleID.required'=>'Bạn phải nhập mã quyền hạn',
         ]);
 
         return Permission::create([
@@ -50,6 +58,14 @@ class PermissionController extends Controller
             'isExport' => 'required',
             'accountID' => 'required',
             'roleID' => 'required',
+        ],[
+            'isView.required'=>'Bạn phải đúng hoặc sai',
+            'isCreate.required'=>'Bạn phải đúng hoặc sai',
+            'isUpdate.required'=>'Bạn phải đúng hoặc sai',
+            'isDelete.required'=>'Bạn phải đúng hoặc sai',
+            'isExport.required'=>'Bạn phải đúng hoặc sai',
+            'accountID.required'=>'Bạn phải nhập mã tài khoản',
+            'roleID.required'=>'Bạn phải nhập mã quyền hạn',
         ]);
 
         $success = $permission->update([

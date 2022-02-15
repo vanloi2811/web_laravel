@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ordel;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
-class OrdelController extends Controller
+class OrderController extends Controller
 {
     public function index()
     {
-        return Ordel::all();
+        return Order::all();
     }
 
     public function show($id)
     {
-        return Ordel::find($id);
+        return Order::find($id);
     }
 
     public function store()
@@ -25,9 +25,15 @@ class OrdelController extends Controller
             'orderStatus' => 'required',
             'deliveryStatus' => 'required',
             'note' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'totalAmount.required'=>'Bạn phải nhập tổng cộng',
+            'orderStatus.required'=>'Bạn phải nhập tình trạng đặt hàng',
+            'deliveryStatus.required'=>'Bạn phải nhập tình trạng giao hàng',
+            'note.required'=>'Bạn phải nhập ghi chú',
         ]);
 
-        return Ordel::create([
+        return Order::create([
             'code' => request('code'),
             'totalAmount' => request('totalAmount'),
             'orderStatus' => request('orderStatus'),
@@ -36,7 +42,7 @@ class OrdelController extends Controller
         ]);
     }
 
-    public function update(Ordel $order)
+    public function update(Order $order)
     {
         request()->validate([
             'code' => 'required',
@@ -44,6 +50,12 @@ class OrdelController extends Controller
             'orderStatus' => 'required',
             'deliveryStatus' => 'required',
             'note' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'totalAmount.required'=>'Bạn phải nhập tổng cộng',
+            'orderStatus.required'=>'Bạn phải nhập tình trạng đặt hàng',
+            'deliveryStatus.required'=>'Bạn phải nhập tình trạng giao hàng',
+            'note.required'=>'Bạn phải nhập ghi chú',
         ]);
 
         $success = $order->update([
@@ -59,7 +71,7 @@ class OrdelController extends Controller
         ];
     }
 
-    public function destroy(Ordel $order)
+    public function destroy(Order $order)
     {
         $success = $order->delete();
 

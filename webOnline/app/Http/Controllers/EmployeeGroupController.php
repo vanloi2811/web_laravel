@@ -23,6 +23,10 @@ class EmployeeGroupController extends Controller
             'code' => 'required',
             'name' => 'required',
             'note' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'name.required'=>'Bạn phải nhập tên',
+            'note.required'=>'Bạn phải nhập ghi chú',
         ]);
 
         return EmployeeGroup::create([
@@ -38,6 +42,10 @@ class EmployeeGroupController extends Controller
             'code' => 'required',
             'name' => 'required',
             'note' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'name.required'=>'Bạn phải nhập tên',
+            'note.required'=>'Bạn phải nhập ghi chú',
         ]);
 
         $success = $employeegroup->update([

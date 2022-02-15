@@ -22,6 +22,9 @@ class RoleController extends Controller
         request()->validate([
             'name' => 'required',
             'note' => 'required',
+        ],[
+            'name.required'=>'Bạn phải nhập tên',
+            'note.required'=>'Bạn phải nhập ghi chú',
         ]);
 
         return Role::create([
@@ -35,6 +38,9 @@ class RoleController extends Controller
         request()->validate([
             'name' => 'required',
             'note' => 'required',
+        ],[
+            'name.required'=>'Bạn phải nhập tên',
+            'note.required'=>'Bạn phải nhập ghi chú',
         ]);
 
         $success = $role->update([

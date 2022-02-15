@@ -22,6 +22,9 @@ class StockAdjustController extends Controller
         request()->validate([
             'code' => 'required',
             'note' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'note.required'=>'Bạn phải nhập ghi chú',
         ]);
 
         return StockAdjust::create([
@@ -35,6 +38,9 @@ class StockAdjustController extends Controller
         request()->validate([
             'code' => 'required',
             'note' => 'required',
+        ],[
+            'code.required'=>'Bạn phải nhập mã',
+            'note.required'=>'Bạn phải nhập ghi chú',
         ]);
 
         $success = $stockadjust->update([
