@@ -54,16 +54,17 @@ class StockAdjustDetailController extends Controller
             'note.required'=>'Bạn phải nhập ghi chú',
             'productID.required'=>'Bạn phải nhập mã sản phẩm',
             'stockAjustID.required'=>'Bạn phải nhập mã điều chỉnh',
+            'quantity' => 'required',
+            'note' => 'required',
+            'productID' => 'required',
+            'stockAdjustID' => 'required',
         ]);
 
         $success = $stockadjustdetail->update([
-            'isView' => request('isView'),
-            'isCreate' => request('isCreate'),
-            'isUpdate' => request('isUpdate'),
-            'isDelete' => request('isDelete'),
-            'isExport' => request('isExport'),
-            'accountID' => request('accountID'),
-            'roleID' => request('roleID'),
+            'quantity' => request('quantity'),
+            'note' => request('note'),
+            'productID' => request('productID'),
+            'stockAdjustID' => request('stockAdjustID'),
         ]);
 
         return [

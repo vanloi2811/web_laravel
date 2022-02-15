@@ -17,6 +17,14 @@ class OrderController extends Controller
         return Order::find($id);
     }
 
+    public function showtop10()
+    {
+        // return Order::all()->take(10)->orderBy('totalAmount','DESC');
+        // return Order::orderBy('totalAmount','DESC')->limit(10);
+        // return Order::all()->limit(10);
+        return Order::all()->take(10);
+    }
+
     public function store()
     {
         request()->validate([

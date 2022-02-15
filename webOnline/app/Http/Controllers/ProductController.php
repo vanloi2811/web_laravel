@@ -121,4 +121,9 @@ class ProductController extends Controller
             'success' => $success
         ];
     }
+
+    public function showbyproductgroup($id)
+    {
+        return Product::all()->where('productGroupID',$id);
+    }
 }
