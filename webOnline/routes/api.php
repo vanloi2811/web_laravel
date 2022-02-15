@@ -49,6 +49,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/products', [ProductController::class, 'index']);
+Route::get('/products/get-list-paging', [ProductController::class, 'getlistpaging']);
 Route::post('/product', [ProductController::class, 'store']);
 Route::get('/product/{id}', [ProductController::class, 'show']);
 Route::get('/product/productgroup/{id}', [ProductController::class, 'showbyproductgroup']);
