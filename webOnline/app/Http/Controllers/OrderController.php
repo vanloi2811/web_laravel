@@ -2,19 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ordel;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
-class OrdelController extends Controller
+class OrderController extends Controller
 {
     public function index()
     {
-        return Ordel::all();
+        return Order::all();
     }
 
     public function show($id)
     {
-        return Ordel::find($id);
+        return Order::find($id);
+    }
+
+    public function showtop10()
+    {
+        // return Order::all()->take(10)->orderBy('totalAmount','DESC');
+        // return Order::orderBy('totalAmount','DESC')->limit(10);
+        // return Order::all()->limit(10);
+        return Order::all()->take(10);
     }
 
     public function store()
@@ -27,7 +35,7 @@ class OrdelController extends Controller
             'note' => 'required',
         ]);
 
-        return Ordel::create([
+        return Order::create([
             'code' => request('code'),
             'totalAmount' => request('totalAmount'),
             'orderStatus' => request('orderStatus'),
@@ -36,7 +44,7 @@ class OrdelController extends Controller
         ]);
     }
 
-    public function update(Ordel $order)
+    public function update(Order $order)
     {
         request()->validate([
             'code' => 'required',
@@ -59,7 +67,7 @@ class OrdelController extends Controller
         ];
     }
 
-    public function destroy(Ordel $order)
+    public function destroy(Order $order)
     {
         $success = $order->delete();
 

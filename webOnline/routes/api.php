@@ -51,6 +51,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/products', [ProductController::class, 'index']);
 Route::post('/product', [ProductController::class, 'store']);
 Route::get('/product/{id}', [ProductController::class, 'show']);
+Route::get('/product/productgroup/{id}', [ProductController::class, 'showbyproductgroup']);
 Route::put('/product/update/{product}', [ProductController::class, 'update']);
 Route::delete('/product/delete/{product}', [ProductController::class, 'destroy']);
 
@@ -73,7 +74,7 @@ Route::put('/account/update/{account}', [AccountController::class, 'update']);
 Route::delete('/account/delete/{account}', [AccountController::class, 'destroy']);
 
 Route::get('/employees', [EmployeeController::class, 'index']);
-Route::get('/employee/{id}', [EmployeeController::class, 'show']);
+Route::get('/v1/employee/get-employee-by-id/{id}', [EmployeeController::class, 'show']);
 Route::post('/employee', [EmployeeController::class, 'store']);
 Route::put('/employee/update/{employee}', [EmployeeController::class, 'update']);
 Route::delete('/employee/delete/{employee}', [EmployeeController::class, 'destroy']);
@@ -92,6 +93,7 @@ Route::delete('/role/delete/{role}', [RoleController::class, 'destroy']);
 
 Route::get('/orders', [OrderController::class, 'index']);
 Route::get('/order/{id}', [OrderController::class, 'show']);
+Route::get('/ordertop10', [OrderController::class, 'showtop10']);
 Route::post('/order', [OrderController::class, 'store']);
 Route::put('/order/update/{order}', [OrderController::class, 'update']);
 Route::delete('/order/delete/{order}', [OrderController::class, 'destroy']);
