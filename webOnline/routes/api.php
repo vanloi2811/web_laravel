@@ -57,6 +57,7 @@ Route::put('/product/update/{product}', [ProductController::class, 'update']);
 Route::delete('/product/delete/{product}', [ProductController::class, 'destroy']);
 
 Route::get('/productgroups', [ProductGroupController::class, 'index']);
+Route::get('/productgroups/get-list-paging', [ProductGroupController::class, 'getlistpaging']);
 Route::post('/productgroup', [ProductGroupController::class, 'store']);
 Route::get('/productgroup/{id}', [ProductGroupController::class, 'show']);
 Route::put('/productgroup/update/{productgroup}', [ProductGroupController::class, 'update']);
@@ -75,12 +76,14 @@ Route::put('/account/update/{account}', [AccountController::class, 'update']);
 Route::delete('/account/delete/{account}', [AccountController::class, 'destroy']);
 
 Route::get('/employees', [EmployeeController::class, 'index']);
-Route::get('/v1/employee/get-employee-by-id/{id}', [EmployeeController::class, 'show']);
+Route::get('/employees/get-list-paging', [EmployeeController::class, 'getlistpaging']);
+Route::get('/employee/{id}', [EmployeeController::class, 'show']);
 Route::post('/employee', [EmployeeController::class, 'store']);
 Route::put('/employee/update/{employee}', [EmployeeController::class, 'update']);
 Route::delete('/employee/delete/{employee}', [EmployeeController::class, 'destroy']);
 
 Route::get('/employeegroups', [EmployeeGroupController::class, 'index']);
+Route::get('/employeegroups/get-list-paging', [EmployeeGroupController::class, 'getlistpaging']);
 Route::get('/employeegroup/{id}', [EmployeeGroupController::class, 'show']);
 Route::post('/employeegroup', [EmployeeGroupController::class, 'store']);
 Route::put('/employeegroup/update/{employeegroup}', [EmployeeGroupController::class, 'update']);
@@ -93,6 +96,7 @@ Route::put('/role/update/{role}', [RoleController::class, 'update']);
 Route::delete('/role/delete/{role}', [RoleController::class, 'destroy']);
 
 Route::get('/orders', [OrderController::class, 'index']);
+Route::get('/orders/get-list-paging', [OrderController::class, 'getlistpaging']);
 Route::get('/order/{id}', [OrderController::class, 'show']);
 Route::get('/ordertop10', [OrderController::class, 'showtop10']);
 Route::post('/order', [OrderController::class, 'store']);
@@ -106,12 +110,14 @@ Route::put('/orderdetail/update/{orderdetail}', [OrderDetailController::class, '
 Route::delete('/orderdetail/delete/{orderdetail}', [OrderDetailController::class, 'destroy']);
 
 Route::get('/customers', [CustomerController::class, 'index']);
+Route::get('/customers/get-list-paging', [CustomerController::class, 'getlistpaging']);
 Route::get('/customer/{id}', [CustomerController::class, 'show']);
 Route::post('/customer', [CustomerController::class, 'store']);
 Route::put('/customer/update/{customer}', [CustomerController::class, 'update']);
 Route::delete('/customer/delete/{customer}', [CustomerController::class, 'destroy']);
 
 Route::get('/addresss', [AddressController::class, 'index']);
+Route::get('/addresss/get-list-paging', [AddressController::class, 'getlistpaging']);
 Route::get('/address/{id}', [AddressController::class, 'show']);
 Route::post('/address', [AddressController::class, 'store']);
 Route::put('/address/update/{address}', [AddressController::class, 'update']);
@@ -124,6 +130,7 @@ Route::put('/permission/update/{permission}', [PermissionController::class, 'upd
 Route::delete('/permission/delete/{permission}', [PermissionController::class, 'destroy']);
 
 Route::get('/stockadjusts', [StockAdjustController::class, 'index']);
+Route::get('/stockadjusts/get-list-paging', [StockAdjustController::class, 'getlistpaging']);
 Route::get('/stockadjust/{id}', [StockAdjustController::class, 'show']);
 Route::post('/stockadjust', [StockAdjustController::class, 'store']);
 Route::put('/stockadjust/update/{stockadjust}', [StockAdjustController::class, 'update']);

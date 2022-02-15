@@ -12,6 +12,34 @@ class CustomerController extends Controller
         return Customer::all();
     }
 
+    public function getlistpaging(Request $request)
+    {
+        $query = Customer::query();
+        
+        // for sort
+        $sortOrder = $request->input("sortOrder");
+        if ($sortOrder == 1) $sortOrder = "DESC";
+        else $sortOrder = "ASC";
+        $sortColumn = $request->input("sortColumn");
+        if ( $sortColumn) {
+            $query->orderBy("id", $sortOrder);
+        }
+
+        // for paging
+        $pageSize = $request->input("pageSize", 10);
+        $pageIndex = $request->input("pageIndex", 1);
+        $result = $query->offset(($pageIndex - 1) * $pageSize)->limit($pageSize)->get();
+        $total = $query->count();
+
+        return [
+            "data" => $result,
+            "total" => $total,
+            "pageIndex" => (int)$pageIndex,
+            "pageSize" => (int)$pageSize,
+            "lastPage" => ceil($total / $pageSize)
+        ];
+    }
+
     public function show($id)
     {
         return Customer::find($id);
