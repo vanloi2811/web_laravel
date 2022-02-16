@@ -38,12 +38,12 @@ class AccountController extends Controller
         request()->validate([
             'username' => 'required',
             'password' => 'required',
-            'note' => 'required',
+            // 'note' => 'required',
             'isActive' => 'required',
         ],[
             'username.required'=>'Bạn phải nhập tên đăng nhập',
             'password.required'=>'Bạn phải nhập mật khẩu',
-            'note.required'=>'Bạn phải nhập ghi chú',
+            // 'note.required'=>'Bạn phải nhập ghi chú',
             'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
         ]);
 
@@ -60,12 +60,12 @@ class AccountController extends Controller
         request()->validate([
             'username' => 'required',
             'password' => 'required',
-            'note' => 'required',
+            // 'note' => 'required',
             'isActive' => 'required',
         ],[
             'username.required'=>'Bạn phải nhập tên đăng nhập',
             'password.required'=>'Bạn phải nhập mật khẩu',
-            'note.required'=>'Bạn phải nhập ghi chú',
+            // 'note.required'=>'Bạn phải nhập ghi chú',
             'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
         ]);
 
