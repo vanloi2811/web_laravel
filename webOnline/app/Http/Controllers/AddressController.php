@@ -12,7 +12,7 @@ class AddressController extends Controller
         return Address::all();
     }
 
-    public function getlistpaging(Request $request)
+    public function getListPaging(Request $request)
     {
         $query = Address::query();
         

@@ -12,7 +12,7 @@ class EmployeeController extends Controller
         return Employee::all();
     }
 
-    public function getlistpaging(Request $request)
+    public function getListPaging(Request $request)
     {
         $query = Employee::query();
         

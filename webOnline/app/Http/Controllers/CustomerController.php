@@ -12,7 +12,7 @@ class CustomerController extends Controller
         return Customer::all();
     }
 
-    public function getlistpaging(Request $request)
+    public function getListPaging(Request $request)
     {
         $query = Customer::query();
         

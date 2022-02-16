@@ -12,7 +12,7 @@ class EmployeeGroupController extends Controller
         return EmployeeGroup::all();
     }
 
-    public function getlistpaging(Request $request)
+    public function getListPaging(Request $request)
     {
         $query = EmployeeGroup::query();
         

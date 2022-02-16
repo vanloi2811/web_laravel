@@ -12,7 +12,7 @@ class ProductGroupController extends Controller
         return ProductGroup::all();
     }
 
-    public function getlistpaging(Request $request)
+    public function getListPaging(Request $request)
     {
         $query = ProductGroup::query();
         

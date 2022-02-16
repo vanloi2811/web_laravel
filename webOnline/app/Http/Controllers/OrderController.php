@@ -12,7 +12,7 @@ class OrderController extends Controller
         return Order::all();
     }
 
-    public function getlistpaging(Request $request)
+    public function getListPaging(Request $request)
     {
         $query = Order::query();
         

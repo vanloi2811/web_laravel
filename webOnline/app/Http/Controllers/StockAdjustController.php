@@ -12,7 +12,7 @@ class StockAdjustController extends Controller
         return StockAdjust::all();
     }
 
-    public function getlistpaging(Request $request)
+    public function getListPaging(Request $request)
     {
         $query = StockAdjust::query();
         
