@@ -42,7 +42,7 @@ class ProductGroupController extends Controller
 
     public function show($id)
     {
-        return CusProductGrouptomer::find($id);
+        return ProductGroup::find($id);
     }
 
     public function store()
