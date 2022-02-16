@@ -8,7 +8,8 @@ class FileController extends Controller
 {
     function upload (Request $req)
     {
-        $result = $req -> file("file")->store('FileUpload');
-        return ["resuft"=>$result];
+        $imageName = time().'.'.$req->file->getClientOriginalName();
+        $req->file->move(public_path('images'), $imageName);
+        return ["result"=>$imageName];
     }
 }
