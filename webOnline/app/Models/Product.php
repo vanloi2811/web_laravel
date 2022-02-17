@@ -11,7 +11,7 @@ class Product extends Model
     protected $table = "product";
 
     protected $fillable = [
-        'code', 'name', 'barCode', 'priceSale', 'priceBuy', 'inventory', 'minStock', 'maxStock', 'sort', 'isActive', 'note', 'productGroupID'
+        'code', 'name', 'barCode', 'priceSale', 'priceBuy', 'inventory', 'minStock', 'maxStock', 'sort', 'isActive', 'note', 'image', 'productGroupID'
     ];
 
     //thử nghiệm khóa ngoại

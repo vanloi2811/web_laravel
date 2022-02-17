@@ -26,10 +26,10 @@ class OrderController extends Controller
         }
 
         // for paging
+        $total = $query->count();
         $pageSize = $request->input("pageSize", 10);
         $pageIndex = $request->input("pageIndex", 1);
         $result = $query->offset(($pageIndex - 1) * $pageSize)->limit($pageSize)->get();
-        $total = $query->count();
 
         return [
             "data" => $result,

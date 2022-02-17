@@ -24,12 +24,12 @@ class ProductController extends Controller
         if ( $sortColumn) {
             $query->orderBy("id", $sortOrder);
         }
-
+      
         // for paging
+        $total = $query->count();
         $pageSize = $request->input("pageSize", 10);
         $pageIndex = $request->input("pageIndex", 1);
         $result = $query->offset(($pageIndex - 1) * $pageSize)->limit($pageSize)->get();
-        $total = $query->count();
 
         return [
             "data" => $result,
@@ -87,6 +87,7 @@ class ProductController extends Controller
             'sort' => request('sort'),
             'isActive' => request('isActive'),
             'note' => request('note'),
+            'image' => request('image'),
             'productGroupID' => request('productGroupID'),
         ]);
     }
@@ -133,6 +134,7 @@ class ProductController extends Controller
             'sort' => request('sort'),
             'isActive' => request('isActive'),
             'note' => request('note'),
+            'image' => request('image'),
             'productGroupID' => request('productGroupID'),
         ]);
 
