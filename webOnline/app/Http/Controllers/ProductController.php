@@ -58,7 +58,7 @@ class ProductController extends Controller
             'maxStock' => 'required',
             'sort' => 'required',
             'isActive' => 'required',
-            'note' => 'required',
+            // 'note' => 'required',
             'productGroupID' => 'required',
         ],[
             'code.required'=>'Bạn phải nhập mã',
@@ -71,7 +71,7 @@ class ProductController extends Controller
             'maxStock.required'=>'Bạn phải nhập tồn kho tối đa',
             'sort.required'=>'Bạn phải nhập loại',
             'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
-            'note.required'=>'Bạn phải nhập ghi chú',
+            // 'note.required'=>'Bạn phải nhập ghi chú',
             'productGroupID.required'=>'Bạn phải nhập mã nhóm sản phẩm',
         ]);
 
