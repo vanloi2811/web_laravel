@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\OrderDetail;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -60,14 +61,26 @@ class OrderController extends Controller
             'totalAmount' => 'required',
             'orderStatus' => 'required',
             'deliveryStatus' => 'required',
-            'note' => 'required',
+            // 'note' => 'required',
         ],[
             'code.required'=>'Bạn phải nhập mã',
             'totalAmount.required'=>'Bạn phải nhập tổng cộng',
             'orderStatus.required'=>'Bạn phải nhập tình trạng đặt hàng',
             'deliveryStatus.required'=>'Bạn phải nhập tình trạng giao hàng',
-            'note.required'=>'Bạn phải nhập ghi chú',
+            // 'note.required'=>'Bạn phải nhập ghi chú',
         ]);
+
+        // $orderItems = [];
+
+        // foreach ($cart->items as $ItemId => $item) {
+        //     $orderItems[] = [
+        //         'order_id' => $order->id,
+        //         'food_id' => $foodId
+        //         'quantity' => $item['qty']
+        //     ];
+        // }
+
+        // OrderDetail:
 
         return Order::create([
             'code' => request('code'),

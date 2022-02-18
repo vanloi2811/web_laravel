@@ -11,6 +11,6 @@ class Employee extends Model
     protected $table = "employee";
 
     protected $fillable = [
-        'code', 'name', 'phone', 'email', 'address', 'dob', 'salary', 'isActive', 'note', 'employeeGroupID'
+        'code', 'name', 'phone', 'email', 'address', 'dob', 'salary', 'isActive', 'note', 'employeeGroupId'
     ];
 }

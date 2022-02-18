@@ -53,16 +53,16 @@ class AddressController extends Controller
             'phone' => 'required',
             'address' => 'required',
             'isDefault' => 'required',
-            'note' => 'required',
-            'customerID' => 'required',
+            // 'note' => 'required',
+            'customerId' => 'required',
         ],[
             'code.required'=>'Bạn phải nhập mã',
             'name.required'=>'Bạn phải nhập tên',
             'phone.required'=>'Bạn phải nhập số điện thoại',
             'address.required'=>'Bạn phải nhập địa chỉ',
             'isDefault.required'=>'Bạn phải nhập đúng hoặc sai',
-            'note.required'=>'Bạn phải nhập ghi chú',
-            'CustomerID.required'=>'Bạn phải nhập mã khách hàng',
+            // 'note.required'=>'Bạn phải nhập ghi chú',
+            'customerId.required'=>'Bạn phải nhập mã khách hàng',
         ]);
 
         return Address::create([
@@ -72,7 +72,7 @@ class AddressController extends Controller
             'address' => request('address'),
             'isDefault' => request('isDefault'),
             'note' => request('note'),
-            'customerID' => request('customerID'),
+            'customerId' => request('customerId'),
         ]);
     }
 
@@ -84,15 +84,15 @@ class AddressController extends Controller
             'phone' => 'required',
             'address' => 'required',
             'isDefault' => 'required',
-            'note' => 'required',
-            'customerID' => 'required',
+            // 'note' => 'required',
+            'customerId' => 'required',
         ],[
             'code.required'=>'Bạn phải nhập mã',
             'name.required'=>'Bạn phải nhập tên',
             'phone.required'=>'Bạn phải nhập số điện thoại',
             'address.required'=>'Bạn phải nhập địa chỉ',
             'isDefault.required'=>'Bạn phải đúng hoặc sai',
-            'note.required'=>'Bạn phải nhập ghi chú',
+            // 'note.required'=>'Bạn phải nhập ghi chú',
             'CustomerID.required'=>'Bạn phải nhập mã khách hàng',
         ]);
 
@@ -103,7 +103,7 @@ class AddressController extends Controller
             'address' => request('address'),
             'isDefault' => request('isDefault'),
             'note' => request('note'),
-            'customerID' => request('customerID'),
+            'customerId' => request('customerId'),
         ]);
 
         return [

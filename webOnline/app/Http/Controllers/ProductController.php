@@ -71,7 +71,7 @@ class ProductController extends Controller
             'sort' => 'required',
             'isActive' => 'required',
             // 'note' => 'required',
-            'productGroupID' => 'required',
+            'productGroupId' => 'required',
         ],[
             'code.required'=>'Bạn phải nhập mã',
             'name.required'=>'Bạn phải nhập tên',
@@ -84,7 +84,7 @@ class ProductController extends Controller
             'sort.required'=>'Bạn phải nhập loại',
             'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
             // 'note.required'=>'Bạn phải nhập ghi chú',
-            'productGroupID.required'=>'Bạn phải nhập mã nhóm sản phẩm',
+            'productGroupId.required'=>'Bạn phải nhập mã nhóm sản phẩm',
         ]);
 
         return Product::create([
@@ -100,7 +100,7 @@ class ProductController extends Controller
             'isActive' => request('isActive'),
             'note' => request('note'),
             'image' => request('image'),
-            'productGroupID' => request('productGroupID'),
+            'productGroupId' => request('productGroupId'),
         ]);
     }
 
@@ -117,8 +117,8 @@ class ProductController extends Controller
             'maxStock' => 'required',
             'sort' => 'required',
             'isActive' => 'required',
-            'note' => 'required',
-            'productGroupID' => 'required',
+            // 'note' => 'required',
+            'productGroupId' => 'required',
         ],[
             'code.required'=>'Bạn phải nhập mã',
             'name.required'=>'Bạn phải nhập tên',
@@ -130,8 +130,8 @@ class ProductController extends Controller
             'maxStock.required'=>'Bạn phải nhập tồn kho tối đa',
             'sort.required'=>'Bạn phải nhập loại',
             'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
-            'note.required'=>'Bạn phải nhập ghi chú',
-            'productGroupID.required'=>'Bạn phải nhập mã nhóm sản phẩm',
+            // 'note.required'=>'Bạn phải nhập ghi chú',
+            'productGroupId.required'=>'Bạn phải nhập mã nhóm sản phẩm',
         ]);
 
         $success = $product->update([
@@ -147,7 +147,7 @@ class ProductController extends Controller
             'isActive' => request('isActive'),
             'note' => request('note'),
             'image' => request('image'),
-            'productGroupID' => request('productGroupID'),
+            'productGroupId' => request('productGroupId'),
         ]);
 
         return [
@@ -166,6 +166,6 @@ class ProductController extends Controller
 
     public function showbyproductgroup($id)
     {
-        return Product::where('productGroupID',$id)->get();
+        return Product::where('productGroupId',$id)->get();
     }
 }

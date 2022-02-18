@@ -52,23 +52,23 @@ class EmployeeController extends Controller
             'name' => 'required',
             'phone' => 'required',
             'email' => 'required',
-            'address' => 'required',
+            // 'address' => 'required',
             'dob' => 'required',
             'salary' => 'required',
             'isActive' => 'required',
-            'note' => 'required',
-            'employeeGroupID' => 'required',
+            // 'note' => 'required',
+            'employeeGroupId' => 'required',
         ],[
             'code.required'=>'Bạn phải nhập mã',
             'name.required'=>'Bạn phải nhập tên',
             'phone.required'=>'Bạn phải nhập số điện thoại',
             'email.required'=>'Bạn phải nhập email',
-            'address.required'=>'Bạn phải nhập địa chỉ',
+            // 'address.required'=>'Bạn phải nhập địa chỉ',
             'dob.required'=>'Bạn phải nhập ngày sinh',
             'salary.required'=>'Bạn phải nhập lương',
             'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
-            'note.required'=>'Bạn phải nhập ghi chú',
-            'employeeGroupID.required'=>'Bạn phải nhập mã nhóm nhân viên',
+            // 'note.required'=>'Bạn phải nhập ghi chú',
+            'employeeGroupId.required'=>'Bạn phải nhập mã nhóm nhân viên',
         ]);
 
         return Employee::create([
@@ -81,7 +81,7 @@ class EmployeeController extends Controller
             'salary' => request('salary'),
             'isActive' => request('isActive'),
             'note' => request('note'),
-            'employeeGroupID' => request('employeeGroupID'),
+            'employeeGroupId' => request('employeeGroupId'),
         ]);
     }
 
@@ -92,23 +92,23 @@ class EmployeeController extends Controller
             'name' => 'required',
             'phone' => 'required',
             'email' => 'required',
-            'address' => 'required',
+            // 'address' => 'required',
             'dob' => 'required',
             'salary' => 'required',
             'isActive' => 'required',
-            'note' => 'required',
-            'employeeGroupID' => 'required',
+            // 'note' => 'required',
+            'employeeGroupId' => 'required',
         ],[
             'code.required'=>'Bạn phải nhập mã',
             'name.required'=>'Bạn phải nhập tên',
             'phone.required'=>'Bạn phải nhập số điện thoại',
             'email.required'=>'Bạn phải nhập email',
-            'address.required'=>'Bạn phải nhập địa chỉ',
+            // 'address.required'=>'Bạn phải nhập địa chỉ',
             'dob.required'=>'Bạn phải nhập ngày sinh',
             'salary.required'=>'Bạn phải nhập lương',
             'isActive.required'=>'Bạn phải nhập đúng hoặc sai',
-            'note.required'=>'Bạn phải nhập ghi chú',
-            'employeeGroupID.required'=>'Bạn phải nhập mã nhóm nhân viên',
+            // 'note.required'=>'Bạn phải nhập ghi chú',
+            'employeeGroupId.required'=>'Bạn phải nhập mã nhóm nhân viên',
         ]);
 
         $success = $employee->update([
@@ -121,7 +121,7 @@ class EmployeeController extends Controller
             'salary' => request('salary'),
             'isActive' => request('isActive'),
             'note' => request('note'),
-            'employeeGroupID' => request('employeeGroupID'),
+            'employeeGroupId' => request('employeeGroupId'),
         ]);
 
         return [

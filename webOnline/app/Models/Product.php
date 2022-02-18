@@ -11,12 +11,12 @@ class Product extends Model
     protected $table = "product";
 
     protected $fillable = [
-        'code', 'name', 'barCode', 'priceSale', 'priceBuy', 'inventory', 'minStock', 'maxStock', 'sort', 'isActive', 'note', 'image', 'productGroupID'
+        'code', 'name', 'barCode', 'priceSale', 'priceBuy', 'inventory', 'minStock', 'maxStock', 'sort', 'isActive', 'note', 'image', 'productGroupId'
     ];
 
     //thử nghiệm khóa ngoại
     public function ProductGroup()
     {
-        return $this->belongsTo(ProductGroup::class, "productGroupID", "id");
+        return $this->belongsTo(ProductGroup::class, "productGroupId", "id");
     }
 }
