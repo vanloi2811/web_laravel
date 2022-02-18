@@ -56,6 +56,7 @@ Route::get('/product/{id}', [ProductController::class, 'show']);
 Route::get('/product/productgroup/{id}', [ProductController::class, 'showbyproductgroup']);
 Route::put('/product/update/{product}', [ProductController::class, 'update']);
 Route::delete('/product/delete/{product}', [ProductController::class, 'destroy']);
+Route::get('/product/newproduct', [ProductController::class, 'newproduct']);
 
 Route::get('/productgroups', [ProductGroupController::class, 'index']);
 Route::get('/productgroups/get-list-paging', [ProductGroupController::class, 'getListPaging']);

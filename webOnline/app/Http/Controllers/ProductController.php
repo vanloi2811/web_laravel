@@ -40,6 +40,18 @@ class ProductController extends Controller
         ];
     }
 
+    public function newproduct()
+    {
+        echo "run";
+        $query = Product::query();
+        $query->orderBy("id", 'DESC');
+        $result = $query->offset(0)->limit(10)->get();
+        return [
+            "data" => $result
+        ];
+
+    }
+
     public function show($id)
     {
         return Product::find($id);
@@ -154,6 +166,6 @@ class ProductController extends Controller
 
     public function showbyproductgroup($id)
     {
-        return Product::all()->where('productGroupID',$id);
+        return Product::where('productGroupID',$id)->get();
     }
 }
