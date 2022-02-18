@@ -52,19 +52,19 @@ class CustomerController extends Controller
             'name' => 'required',
             'phone' => 'required',
             'email' => 'required',
-            'dob' => 'required',
-            'password' => 'required',
+            // 'dob' => 'required',
+            // 'password' => 'required',
             'isActive' => 'required', //quyền hoạt động
-            'note' => 'required',
+            // 'note' => 'required',
         ],[
             'code.required'=>'Bạn phải nhập mã',
             'name.required'=>'Bạn phải nhập tên',
             'phone.required'=>'Bạn phải nhập số điện thoại',
             'email.required'=>'Bạn phải nhập email',
-            'dob.required'=>'Bạn phải nhập ngày sinh',
-            'password.required'=>'Bạn phải nhập mật khẩu',
+            // 'dob.required'=>'Bạn phải nhập ngày sinh',
+            // 'password.required'=>'Bạn phải nhập mật khẩu',
             'isActive.required'=>'Bạn phải đúng hoặc sai',
-            'note.required'=>'Bạn phải nhập ghi chú',
+            // 'note.required'=>'Bạn phải nhập ghi chú',
         ]);
 
         return Customer::create([
@@ -89,7 +89,7 @@ class CustomerController extends Controller
             'dob' => 'required',
             'password' => 'required',
             'isActive' => 'required',
-            'note' => 'required',
+            // 'note' => 'required',
         ],[
             'code.required'=>'Bạn phải nhập mã',
             'name.required'=>'Bạn phải nhập tên',
@@ -98,7 +98,7 @@ class CustomerController extends Controller
             'dob.required'=>'Bạn phải nhập ngày sinh',
             'password.required'=>'Bạn phải nhập mật khẩu',
             'isActive.required'=>'Bạn phải đúng hoặc sai',
-            'note.required'=>'Bạn phải nhập ghi chú',
+            // 'note.required'=>'Bạn phải nhập ghi chú',
         ]);
 
         $success = $customer->update([
